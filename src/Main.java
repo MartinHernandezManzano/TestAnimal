@@ -1,12 +1,16 @@
 public class Main {
     public static void main(String[] args) {
 
-        //creamos una instancia de cada objeto
-        Animal Toby = new Perro();
-        Animal Miguel = new Gato();
+        // Creamos un array de tipo Animal
+        Animal[] animales = new Animal[2];
 
-        //llamamos a los methods adaptados a cada animal
-        Toby.hacerSonido();
-        Miguel.hacerSonido();
+        // Metemos objetos Perro y Gato dentro del array
+        animales[0] = new Perro();
+        animales[1] = new Gato();
+
+        // Recorremos el array y usamos hacerSonido()
+        for (Animal a : animales) {
+            a.hacerSonido();
+        }
     }
 }
